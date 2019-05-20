@@ -1,2 +1,2 @@
-# K-Capture
-A winforms Capture 
+**Keyboard mapping**:  
+-   **Space:** Do a screenshot
