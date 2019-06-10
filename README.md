@@ -10,3 +10,4 @@
 -   Arbitrary scaling
 
 **Demonstration**:
+![image](https://github.com/kyle0418/K-Capture/blob/master/Code_new%20version/Demonstration.png)
