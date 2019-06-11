@@ -45,7 +45,7 @@ namespace capture
             panel1.Visible = false;
             Bitmap bit = new Bitmap(this.ClientRectangle.Width, this.ClientRectangle.Height);
             Graphics g = Graphics.FromImage(bit);
-            g.CopyFromScreen(new Point(this.Location.X, this.Location.Y + (this.Height - this.ClientRectangle.Height)), new Point(0, 0), bit.Size);
+            g.CopyFromScreen(new Point(this.Location.X + 1, this.Location.Y + (this.Height - this.ClientRectangle.Height) + 1), new Point(0, 0), bit.Size);
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Jpg |*.jpg|Bmp |*.bmp|Gif |*.gif|Png |*.png|Wmf |*.wmf";
