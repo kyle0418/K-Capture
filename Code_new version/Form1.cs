@@ -155,8 +155,11 @@ namespace capture
                         CaptureMethod();
                         break;
                     case Keys.Enter:
-                        panel1.Visible = !panelvisible;
-                        panelvisible = !panelvisible;
+                        if (!(this.Width < panel1.Width || this.Height < panel1.Height))
+                        {
+                            panel1.Visible = !panelvisible;
+                            panelvisible = !panelvisible;
+                        }
                         break;
                 }
             }
@@ -184,7 +187,22 @@ namespace capture
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            panel1.Location = new Point(this.Width / 2 - panel1.Width / 2, this.Height / 2 - panel1.Height / 2);
+            if (this.Width < panel1.Width || this.Height < panel1.Height)
+            {
+                panel1.Visible = false;
+            }
+            else
+            {
+                if (panelvisible == true)
+                {
+                    panel1.Visible = true;
+                }
+                else
+                {
+                    panel1.Visible = false;
+                }
+                panel1.Location = new Point(this.Width / 2 - panel1.Width / 2, this.Height / 2 - panel1.Height / 2);
+            }
         }
     }
 }
